@@ -56,3 +56,90 @@ How can they get started early?
     development
   - Checkout out some links at the end of the slide
 
+1
+hey im kev
+chair
+2
+what is sig
+solely acm.mst.edu right now but will expand
+3
+demo
+heres the stuff
+calendar
+membership page
+4
+plan to do more projects
+stuco
+sigs
+workshops for foundational programming knowledge
+SAY MONTHLY
+5
+python nightly
+bleeding edge software
+semantic html5
+6
+tools
+production level
+jenkins - continuous integration builder
+vagrant - vm environment to standardize our workflows
+nginx - reverse proxy, when you go to acm.mst.edu, serves pages
+travis ci - automated testing defined in django/python
+git - heavily used, this presentation has been through the git-mill
+django is the whole backend
+7
+why join us
+very close to production development
+kevin tries to set up as close to professional as possible
+code reviews
+industry design practices include
+release cycles
+git flows
+code style checks
+most important is visual proof of work
+being able to show a link to your live work is important
+8
+What will be taught
+web dev tools
+you will have to touch each of the tools and languages at some point
+learn about http requests, response codes, apis
+git will be used in your future job and you will be proficient after working
+with us
+unit testing, all code must be unit tested
+coding practices - coding style comments, proper naming
+teamwork - sig.com is very teamwork focused you have to work with other people
+constantly
+9
+Whats unique
+we are the only solely web team
+we have the most robust code reviewing practices and focus heavily on our
+consistent styling
+short time to live code - the code in our repo goes live in sometimes just days.
+10
+foundations of python
+parallels to cpp
+just a nice intro to python, a useful and generic language
+11
+how to get involved
+2 paths,
+learning track, dev track
+the learners can join our workshops every month
+devs can still be new to programming and will learn lots in a shorter time frame
+make this part nice
+12
+start early
+learn about the development stack
+look closely at your favorite sites, fool around in the inspect element
+view our repository of web development resources
+13
+dont say wrapping up
+development meetings every wednesday
+once a month we will have an advertised workshop meeting look out
+the location is tentative so watch your emails
+14
+contact us
+give a few seconds for info to be seen
+15
+join our discord
+mention that it will be a great place to just talk to your peers and learn as
+well
+join even if you just want to go to the workshops
