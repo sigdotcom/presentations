@@ -1,0 +1,58 @@
+What do we do?
+   - Projects
+   - Workshops
+
+Why should they join SIG.com?
+  - Experience with production level web development.
+  - Introduciton to industry software engineering design practices
+    + GIT
+    + Production cycle
+    + Design documentation
+    + Code reviews
+  - Extremely visable proof of work
+
+What can they learn from SIG.com?
+  - Web development tools and languages
+  - How websites work
+  - High-level git practices
+  - Unit-testing / writing good, readible, and well-documented code
+  - Teamwork
+
+What are they diferent topics they can work on?
+  - Frontend
+  - Backend
+  - Development Operations
+  - UX / UI design
+  - Marketing
+  - Management
+
+What do we use? X
+  - Django
+  - NGINX
+  - Vagrant
+  - Jenkins
+  - HTML
+  - CSS
+  - Javascript
+  - git
+
+What is their commitment like?
+  There are really two approaches to our commitment. Firstly, we have monthly
+  'workshops' in which anyone can come and learn about some topic (mostly web
+  centric). Secondly, there is the development team which meets every week and
+  actually develops the website. This is more commitment, but you get a great
+  deal more of reward.
+
+What is unique about SIG.com?
+  - We are the only Computer Science organization focused solely on
+    web-development.
+  - We have very rigious code review and code practices
+  - Very low Time to Live development, stuff that you develop could be up on the
+    same day
+
+How can they get started early?
+  - Learn about our development stack, specifically what you want to focus on.
+  - Spend some time looking carefully at websites, get some ideas as to future
+    development
+  - Checkout out some links at the end of the slide
+
