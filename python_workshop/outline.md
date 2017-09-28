@@ -25,7 +25,8 @@ this makes the code run slower, it does have some nice benefits which will be
 show throughout the talk.
 
 + Whitespace delimited
-+ The interperter pays special attention to whitespace instead of curly braces in c++
++ The interperter pays special attention to whitespace instead of curly braces
+  in c++
 + 4 spaces per indentation
 
 
@@ -110,6 +111,15 @@ x = (1,) # Note ','
 ```
 
 ### Dictionary
+An iterable collection of key-value pairs, the order of the keys is not
+guaranteed due to the dictionary implementation
+```python
+x = {}
+x = dict()
+```
+
+```python
+```
 ### 
 ## Conditionals
 
