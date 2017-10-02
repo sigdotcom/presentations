@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js
+    </title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blackneo.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburnneo.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Header section -->
+        <section>
+          <div style="margin: 0 auto; background-size: contain; background-position: center; background-repeat: no-repeat; width: 450px; height: 400px; background-image: url(./img/SIGdotCOM.png);">
+          </div>
+          <h2>Python Workshop</h2>
+          <h4>October 4th, 2017</h4>
+        </section>
+
+        <!-- Introduction Section -->
+        <section>
+          <section>
+            <h2>What is Python?</h2>
+            <p class="fragment"> 
+              An <b>interperted</b>, <b>general use</b>,
+              <b>dynamically typed</b> programming language with automatic
+              memory management and support for multiple programming paradigms
+              with <b>whitespace indentation</b>.
+            </p>
+          </section>
+          <section>
+            <h2>Why use Python?</h2>
+            <ol>
+              <li>Easy to read</li>
+              <li>Easy to write</li>
+              <li>Rapid Prototyping</li>
+            </ol>
+          </section>
+          <section>
+            <h2>What is Python used for?</h2>
+            <ol>
+              <li>
+                <b>Web Development</b>: Django, Pyramid, Bottle, Tornado,
+                Flask, web2py
+              </li>
+              <li>
+                <b>GUI Development</b>: tkInter, PyGObject, PyQt, PySide, Kivy,
+                wxPython
+              </li>
+              <li><b>Scientific and Numeric</b>: SciPy, Pandas, IPython</li>
+              <li><b>Software Development</b>: Buildbot, Trac, Roundup</li>
+              <li><b>System Administration</b>: Ansible, Salt, OpenStack</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Interpreted?</h2>
+            <ul>
+              <p>Python has <b>NO</b> compile step</p>
+            </ul>
+          </section>
+        </section>
+        
+        <!-- Assignment Section -->
+        <section>
+          <section>
+            <h1>Assignment</h1>
+          </section>
+          <section>
+            <h2>Dyanmically Typed?</h2>
+            <p>
+              All types are determined during runtime.
+            </p>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code>
+              int x = 0;
+              string y = "test";
+              int z[5];
+              </code>
+              <code style="border: 0">
+              x = 0
+              y = "test"
+              z = []
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>DANGER</h3>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = 0
+              x = "test"
+              x = []
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <!-- Types Section -->
+        <section>
+          <section>
+            <h1>Built-in Types</h1>
+          </section>
+
+          <section>
+            <h2>int()</h3>
+            <p>Integers</p>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = 0
+              x = 10
+              x = int("10")
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>float()</h3>
+            <p>Floating Point Numbers</p>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = 1.0
+              x = 10.0
+              x = float("10.0")
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>str()</h3>
+            <p>Strings; No char type</p>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = "test"
+              x = "10"
+              x = str(15)
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>bool()</h3>
+            <p>Boolean - True or False</p>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = True
+              x = False
+              x = bool(1) # True
+              x = bool(0) # False
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>tuple()</h3>
+            <ul>
+              <li>Iterable, immutable sequence of elements.</li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = tuple()
+              x = ()
+              x = (1, 2, 3)
+              x = ("test", 1)
+              x[0] # "test"
+              x[0] = "foo" # TypeError
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>list()</h3>
+            <ul>
+              <li>Iterable, mutable sequence of elements.</li>
+              <li>Can grow to "infinite" length</li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = list()
+              x = []
+              x = ["test", "test"]
+              x = [1, 3]
+              x = ["test", 1]
+              x[0] = 3
+              print(x) # [3, 1]
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>List Indexing</h3>
+
+            <h5>Regular</h5>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = ["foo", "bar", 10]
+              x[0] # "foo"
+              x[2] # 10
+              x[3] # IndexError
+              </code>
+            </pre>
+
+            <h5>Negative</h5>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = ["foo", "bar", 10]
+              x[-1] # 10
+              x[-2] # "bar"
+              x[-4] # IndexError
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>List Splicing</h3>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0" data-noescape>
+              spliceable[start:stop:step]
+              </code>
+            </pre>
+            <ul>
+              <li>Returns a shallow copy of the 'spliced' list</li>
+              <li>start - Where to begin slicing, inclusive</li>
+              <li>stop - Where to end slicing, exclusive</li>
+              <li>step- How far to 'step' each time</li>
+            </ul>
+          </section>
+          <section>
+            <h2>List Splicing (ex.)</h3>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0" data-noescape>
+              x = [10, "test", 30, "apple"]
+
+              x[0:]   # [10, "test", 30, "apple"]
+              x[1:2]  # ["test"]
+              x[1::2] # ["test", "apple"]
+              x[::-1] # ["apple", 30, "test", 10]
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>dict()</h3>
+            <ul>
+              <li>Iterable, mutable collection of key-value pairs</li>
+              <li>Order of keys is not guaranteed</li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = dict()
+              x = {}
+              x = {"test": 10, "apple": 10}
+              x = {10: "test", "foo": "bar"}
+
+              x[10] # "test"
+              x["not_real"] # IndexError
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <!-- Operators Section -->
+        <section>
+          <section>
+            <h1>Operators</h1>
+          </section>
+          <section>
+            <h2>Arithmetic Operators</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              1 + 1 # 2
+              1 - 1 # 0
+              5 / 2 # 2.5
+              5 * 2 # 10
+
+              # Floor Quotient
+              5 // 2 # 2
+
+              # Power
+              2 ** 2 # 4
+
+              # Modulo (Remainder)
+              5 % 2 # 1
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>"Self-Assign" Operators</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = 3
+              x += 1 # 4
+              x -= 1 # 3
+              x *= 2 # 6
+              x /= 3 # 2.0
+              x //= 2 # 1
+              x += 5  # 6
+              x **= 2 # 36
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Relational Operators</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              3 == 3 # True
+              3 != 3 # False
+              5 >= 3 # True
+              3 <= 3 # True
+              "foobar" < "foo" # False
+              [1,2,3] > [1,2] # True
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Logical Operators</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              True and True # True
+              False or False # True
+              not True # False
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Membership Operator</h2>
+            <ul>
+              <li><b>in</b> operator</li>
+              <li>
+                Returns true if the "subject" is a member of the "predicate",
+                otherwise false
+              </li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = [1,2,3,4]
+
+              4 in x # True
+              50 in x # False
+
+              y = {"a": 10, "b": 50}
+              50 in y # False
+              50 in y.values() # True
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Identity Operator</h2>
+            <ul>
+              <li><b>is</b> operator</li>
+              <li>
+                Returns True if the "subject" has the same identity as the
+                "predicate", otherwise False
+              </li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = [1,2,3,4]
+              y = [1,2,3,4]
+              x == y # True
+              x is y # False
+
+              x = 10
+              x is None # False
+              x = None
+              x is None # True
+              </code>
+            </pre>
+          </section>
+
+        </section>
+
+        <!-- Conditionals Section -->
+        <section>
+          <section>
+            <h1>Flow Control</h1>
+          </section>
+          <section>
+            <h2>If...Elif...Else</h2>
+            <ul>
+              <li>Takes a boolean</li>
+              <li>Colon after statement; no more curly brackets</li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = 3
+
+              if(x == 0):
+                  print("x == 0")
+              elif(x < 0):
+                  print("x < 0")
+              elif(x > 0):
+                  print("x > 0")
+              else:
+                  print("x not == 0 or not < 0 or not > 0")
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>For Loop</h2>
+            <ul>
+              <li>Takes an iterable that can 'yield' one member at a time</li>
+              <ol>
+                <li>list</li>
+                <li>str</li>
+                <li>tuple</li>
+                <li>dict</li>
+                <li>File Object</li>
+              </ol>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              >> x = [1,2,3]
+
+              >> for item in x:
+              >>    print(x)
+              >>    ...
+              1
+              2
+              3
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>For Loop (subcommands)</h2>
+            <ul>
+              <li>pass</li>
+              <li>break</li>
+              <li>continue</li>
+              <li>finally</li>
+              <li>else</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>While Loop</h2>
+            <ul>
+              <li>Takes Bool</li>
+              <li>Pre-check exclusive, no post-check</li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              x = True
+
+              while x:
+                print(x)
+                foo()
+                ...
+              </code>
+            </pre>
+
+          </section>
+
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        history: true,
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {src: 'plugin/markdown/marked.js' },
+          {src: 'plugin/markdown/markdown.js' },
+          {src: 'plugin/notes/notes.js', async: true },
+          {
+            src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
