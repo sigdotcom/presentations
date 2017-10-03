@@ -146,6 +146,18 @@
               x = "test"
               x = "10"
               x = str(15)
+
+              # Concatenation
+              x = "Hello"
+              y = " World!"
+              x + y # "Hello World!"
+
+              # Repeating
+              print("Hi"*5) # "HiHiHiHiHi"
+
+              # Formatting
+              x = "{}".format("Hello")
+              print(x) # "Hello"
               </code>
             </pre>
           </section>
@@ -194,7 +206,8 @@
               x = [1, 3]
               x = ["test", 1]
               x[0] = 3
-              print(x) # [3, 1]
+              x.append("test")
+              print(x) # [3, 1, "test"]
               </code>
             </pre>
           </section>
@@ -451,22 +464,116 @@
             <h2>While Loop</h2>
             <ul>
               <li>Takes Bool</li>
-              <li>Pre-check exclusive, no post-check</li>
+              <li>Pre-check exclusively, no do-while</li>
             </ul>
             <pre style="border: 0; box-shadow: 0px 0px;">
               <code style="border: 0">
               x = True
 
               while x:
-                print(x)
                 foo()
                 ...
               </code>
             </pre>
+          </section>
+        </section>
+
+        <!-- Functions Section -->
+        <section>
+          <section>
+            <h1>Functions</h1>
+          </section>
+
+          <section>
+            <h2>Sytanx</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            def {{function_name}}({{arguments}}):
+                {{body}}
+
+            # Example
+            def is_even(num):
+                return num % 2 == 0
+            </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Calling a function</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            def is_even(num):
+                return num % 2 == 0
+
+            is_four_even = is_even(4)
+            print(is_four_even) # True
+            </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Some Notes</h2>
+            <ul>
+              <li>All parameters are passed by <i>object reference</i></li>
+              <li>If no return type is specified, <b>None</b> is returned</li>
+              <li>It is possible to return more than one item</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Argument Types</h2>
+            <ul>
+              <li>Positional Arguments</li>
+              <li>Keyword Arguments</li>
+            </ul>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            def is_divisible(num, divisor=2):
+                return num % divisor == 0
+            </code>
+            </pre>
+
+            <pre class="fragment" data-trim style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            def cheeseshop(kind, *arguments, **keywords):
+                print("-- Do you have any", kind, "?")
+                print("-- I'm sorry, we're all out of", kind)
+                for arg in arguments:
+                    print(arg)
+                print("-" * 40)
+                keys = sorted(keywords.keys())
+                for kw in keys:
+                  print(kw, ":", keywords[kw])
+            </code>
+            </pre>
 
           </section>
 
+          <section>
+          <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            def cheeseshop(kind, *arguments, **keywords):
+                print("-- Do you have any", kind, "?")
+                print("-- I'm sorry, we're all out of", kind)
+                for arg in arguments:
+                    print(arg)
+                print("-" * 40)
+                keys = sorted(keywords.keys())
+                for kw in keys:
+                  print(kw, ":", keywords[kw])
+            </code>
+          </pre>
+          <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            cheeseshop("Limburger", "It's very runny, sir.",
+                       "It's really very, VERY runny, sir.",
+                        shopkeeper="Michael Palin",
+                        client="John Cleese",
+                        sketch="Cheese Shop Sketch")
+            </code>
+          </pre>
+          </section>
         </section>
+
 
       </div>
     </div>
