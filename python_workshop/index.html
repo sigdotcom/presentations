@@ -455,10 +455,30 @@
               <li>pass</li>
               <li>break</li>
               <li>continue</li>
-              <li>finally</li>
               <li>else</li>
             </ul>
           </section>
+
+          <section>
+            <h2>Subcommands (ex.)</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+              <code style="border: 0">
+              lst = [1,2,3,4,5]
+
+              for x in lst:
+                  if x == 2:
+                      continue
+                  elif x > 4:
+                      break
+                  else:
+                      print(x)
+              else:
+                  print("Looped Successfully")
+              </code>
+            </pre>
+
+          </section>
+
 
           <section>
             <h2>While Loop</h2>
@@ -477,6 +497,44 @@
             </pre>
           </section>
         </section>
+
+        <!-- File I/O Section -->
+        <section>
+          <section>
+            <h1>File I/O</h1>
+          </section>
+
+          <section>
+            <h2>Syntax</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            open(file, mode="r") # Read
+            open(file, mode="w") # Write
+            open(file, mode="a") # Append
+            </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Demo 1, 2, 3</h2>
+          </section>
+
+          <section>
+            <h2>Context Manager</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            with open(file, mode) as file:
+                ....
+            </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Demo 4</h2>
+          </section>
+
+        </section>
+
 
         <!-- Functions Section -->
         <section>
@@ -575,6 +633,66 @@
           </section>
         </section>
 
+        <!-- Classes Section -->
+        <section>
+          <section>
+            <h1>Classes</h1>
+          </section>
+
+          <section>
+            <h2>Syntax</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            class ClassName:
+                {{statement-1}}
+                .
+                .
+                .
+                {{statement-N}}
+            </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Classes Example</h2>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            class Car(Object):
+                """Describes a car"""
+                color = red
+
+                def __init__(self, model):
+                    self.model = model 
+
+                def get_color(self):
+                    return self.color
+
+                def set_color(self, num):
+                    self.color = num
+            </code>
+            </pre>
+            <pre style="border: 0; box-shadow: 0px 0px;">
+            <code>
+            ford_escape = Car("Ford") # Class Instantiation
+            ford_escape.get_fuel() # 100
+            ford_escape.get_color() # red
+            ford_escape.color # red
+            ford_escape.model # Ford
+            </code>
+            </pre>
+          </section>
+        </section>
+
+        
+        <section>
+          <h2>Topics I didn't cover</h2>
+          <ul>
+            <li>Generators</li>
+            <li>List/Dictionary Comprehensions</li>
+            <li>Higher order functions</li>
+            <li>Exception Handling</li>
+            <li>Many others</li>
+          </ul>
+        </section>
 
       </div>
     </div>
