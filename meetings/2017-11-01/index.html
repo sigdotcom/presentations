@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
+    <link rel="stylesheet" href="../../src/css/reveal.css">
+    <link rel="stylesheet" href="../../src/css/theme/blackneo.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../src/lib/css/zenburnneo.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../../src/css/print/pdf.css' : '../../src/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div style="margin: 0 auto; background-size: contain; background-position: center; background-repeat: no-repeat; width: 450px; height: 400px; background-image: url(../../src/img/SIGdotCOM.png);">
+          </div>
+          <h2>Nov. 01, 2017
+          </h2>
+        </section>
+        <section>
+          <section>
+            <h2>Schedule</h2>
+            <h4>Last week's progress</h4>
+            <ul>
+              <li>Code Sprint Projects</li>
+              <li>Products App</li>
+              <li>Tools App</li>
+              <li>Front End Overhaul</li>
+              <li>Others?</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Schedule</h2>
+            <h4>Other items</h4>
+            <ul>
+              <li>Django w/ Joey</li>
+              <li>Goals before 2018</li>
+              <li>Frontend/ Mozilla Workshop Briefing (Nov. 8)</li>
+              <li>Tasks for the week</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../src/lib/js/head.min.js"></script>
+    <script src="../../src/js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        history: true,
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {src: '../../src/plugin/markdown/marked.js' },
+          {src: '../../src/plugin/markdown/markdown.js' },
+          {src: '../../src/plugin/notes/notes.js', async: true },
+          {
+            src: '../../src/plugin/highlight/highlight.js', async: true, callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
