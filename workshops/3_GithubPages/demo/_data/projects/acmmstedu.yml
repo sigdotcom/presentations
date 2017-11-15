@@ -1,0 +1,6 @@
+name: acm.mst.edu
+desc: acm.mst.edu is the website for the Missouri S&T branch of ACM.
+techs:
+  - name: HTML/ CSS
+  - name: Django
+  - name: Python

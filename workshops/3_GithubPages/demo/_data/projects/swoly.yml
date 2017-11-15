@@ -1,0 +1,6 @@
+name: Swoly
+desc: Swoly is an in progress fitness app designed by myself and Innocent Niyibizi.
+techs:
+  - name: Java
+  - name: SQLite
+  - name: XML

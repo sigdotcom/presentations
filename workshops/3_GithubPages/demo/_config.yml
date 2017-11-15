@@ -1,0 +1,5 @@
+title: "Clay McGinnis Portfolio"
+theme: jekyll-theme-cayman
+markdown: kramdown
+kramdown:
+    input: GFM

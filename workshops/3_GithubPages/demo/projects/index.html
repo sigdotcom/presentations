@@ -1,0 +1,23 @@
+---
+layout: default
+title: Projects
+---
+
+
+<ul>
+  {% for project in site.data.projects %}
+  {% assign projec = project[1] %}
+  <li>
+    <h3>{{ projec.name }}</h3>
+    <p>{{ projec.desc }}</p>
+    {% if projec.techs %}
+    <h5>Tech Used:</h5>
+    <ul>
+      {% for tech in projec.techs %}
+      <li>{{ tech.name }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
