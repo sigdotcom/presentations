@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
+    <link rel="stylesheet" href="../../src/css/reveal.css">
+    <link rel="stylesheet" href="../../src/css/theme/blackneo.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../src/lib/css/zenburnneo.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../../src/css/print/pdf.css' : '../../src/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div style="margin: 0 auto; background-size: contain; background-position: center; background-repeat: no-repeat; width: 450px; height: 400px; background-image: url(../../src/img/SIGdotCOM.png);">
+          </div>
+          <h2>Online Portfolio Workshop</h2>
+          <h4>November 15th, 2017</h4>
+        </section>
+        <section>
+          <h2>Discord for Links</h2>
+          <img src="../../src/img/SIGdotCOM-Discord.svg" style="height: 450px;">
+          <h2>https://discord.gg/kNEDyU6</h2>
+        </section>
+        <section>
+          <h2>Goals</h2>
+          <ul>
+            <li>Front End</li>
+            <li>Web Frameworks</li>
+            <li>Git</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Getting Started</h2>
+          <ul>
+            <li><strong>Linked:</strong> Create a new repo named <em>username</em>.github.io</li>
+            <li>Clone the repo to your machine</li>
+            <li>Go to the repo settings</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Development Time</h2>
+            <ul>
+              <li>Open a new file called index.html</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Development Time: Cont.</h2>
+            <ul>
+              <li>3 files in one</li>
+            </ul>
+              <pre class="fragment"><code>
+username.github.io/
+        education.md
+        experience.md
+        skills.md
+        index.html
+              </code></pre>
+          </section>
+          <section>
+            <h2>Development Time: Cont.</h2>
+            <ul>
+              <li>Make that 4 files in one</li>
+            </ul>
+            <pre class="fragment"><code>
+username.github.io/
+        _includes/
+                header.html
+        education.md
+        experience.md
+        skills.md
+        index.html
+              </code></pre>
+          </section>
+        </section>
+        <section>
+          <h2>How useful is this?</h2>
+          <ul>
+            <li>Extensible</li>
+            <li>Fits most needs</li>
+            <li class="fragment">Custom</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Data files, loops, and ifs</h2>
+          <pre class="fragment"><code>
+{% for thing in site.dir.stuff %}
+{% endfor %}
+
+{% if thing %}
+{% endif %}
+          </code></pre>
+        </section>
+        <section>
+          <h1>Let's make a new page</h1>
+        </section>
+        <section>
+          <h2>Customizing</h2>
+          <ul>
+            <li>Go back to settings for the repo</li>
+            <li><strong>Linked:</strong> Everything can be changed to your whim</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Django</h1>
+          <p>It's what we use</p>
+        </section>
+        <section>
+          <h1>Thank you!</h2>
+          <h3>Hope to see you at our next meeting!</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../src/lib/js/head.min.js"></script>
+    <script src="../../src/js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        history: true,
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {src: '../../src/plugin/markdown/marked.js' },
+          {src: '../../src/plugin/markdown/markdown.js' },
+          {src: '../../src/plugin/notes/notes.js', async: true },
+          {
+            src: '../../src/plugin/highlight/highlight.js', async: true, callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
