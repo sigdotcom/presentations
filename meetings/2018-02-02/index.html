@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
+    <link rel="stylesheet" href="../../src/css/reveal.css">
+    <link rel="stylesheet" href="../../src/css/theme/blackneo.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../src/lib/css/zenburnneo.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../../src/css/print/pdf.css' : '../../src/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div style="margin: 0 auto; background-size: contain; background-position: center; background-repeat: no-repeat; width: 450px; height: 400px; background-image: url(../../src/img/SIGdotCOM.png);">
+          </div>
+          <h2>Feb. 2, 2018
+          </h2>
+        </section>
+        <section>
+          <section>
+            <h2>Schedule for Today</h2>
+            <ul class="fragment">
+              <li>
+                Introduce Semester Projects
+                <ul>
+                  <li>Frontend</li>
+                  <li>Backend</li>
+                </ul>
+              </li>
+              <li>Setting up Teams</li>
+              <li>Brainstorming/Collect Project Ideas</li>
+              <li>http 101 (If time permits)</li>
+            </ul>
+          </section>
+        </section>
+        <section data-background="#E4F1FE" data-background-transition="zoom">
+          <section>
+            <h2>Frontend Projects</h2>
+          </section>
+          <section>
+            <h2>Events</h2>
+            <ul>
+              <li>Major Events</li>
+              <li>"Premium" Events</li>
+              <li>
+                <a target="_blank" href="https://acm.mst.edu/events/create/">
+                  Event Create Page
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Permissions</h2>
+            <ul>
+              <li>Permissions Matrix Page</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Membership</h2>
+            <ul>
+            <li>
+              <a target="_blank" href="https://acm.mst.edu/tools/membership/">
+                Membership Tool
+              </a>
+            </li>
+          </section>
+          <section>
+            <h2>UI Toolkit</h2>
+          </section>
+        </section>
+        <section data-background="#ececec" data-background-transition="zoom">
+          <section>
+            <h2>Backend Projects</h2>
+          </section>
+          <section>
+            <h2>Events</h2>
+            <ul>
+              <li>Event Tagging</li>
+              <li>"Premium" Events</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Permissions</h2>
+            <ul>
+              <li>API</li>
+              <li>API Keys for Frontend calls</li>
+              <li>General Permission Structure</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Teams</h2>
+          </section>
+          <section>
+            <h2>Brainstorming / Collecting Ideas</h2>
+          </section>
+        </section>
+        <section>
+          <h2>http 101</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../src/lib/js/head.min.js"></script>
+    <script src="../../src/js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        history: true,
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {src: '../../src/plugin/markdown/marked.js' },
+          {src: '../../src/plugin/markdown/markdown.js' },
+          {src: '../../src/plugin/notes/notes.js', async: true },
+          {
+            src: '../../src/plugin/highlight/highlight.js', async: true, callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
