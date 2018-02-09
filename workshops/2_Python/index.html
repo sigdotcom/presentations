@@ -45,7 +45,7 @@
           <div style="margin: 0 auto; background-size: contain; background-position: center; background-repeat: no-repeat; width: 450px; height: 400px; background-image: url(./img/SIGdotCOM.png);">
           </div>
           <h2>Python Workshop</h2>
-          <h4>October 4th, 2017</h4>
+          <h4>February 09th, 2018</h4>
         </section>
 
         <!-- Introduction Section -->
@@ -227,7 +227,7 @@
               x = ["test", 1]
               x[0] = 3
               x.append("test")
-              print(x) # [3, 1, "test"]
+              print(x) # [3, 1, 'test']
               </code>
             </pre>
           </section>
@@ -274,10 +274,10 @@
               <code style="border: 0" data-noescape>
               x = [10, "test", 30, "apple"]
 
-              x[0:]   # [10, "test", 30, "apple"]
-              x[1:2]  # ["test"]
-              x[1::2] # ["test", "apple"]
-              x[::-1] # ["apple", 30, "test", 10]
+              x[0:]   # [10, 'test', 30, 'apple']
+              x[1:2]  # ['test']
+              x[1::2] # ['test', 'apple']
+              x[::-1] # ['apple', 30, 'test', 10]
               </code>
             </pre>
           </section>
@@ -295,7 +295,7 @@
               x = {10: "test", "foo": "bar"}
 
               x[10] # "test"
-              x["not_real"] # IndexError
+              x["not_real"] # KeyError
               </code>
             </pre>
           </section>
@@ -336,9 +336,9 @@
               x -= 1 # 3
               x *= 2 # 6
               x /= 3 # 2.0
-              x //= 2 # 1
-              x += 5  # 6
-              x **= 2 # 36
+              x //= 2 # 1.0
+              x += 5  # 6.0
+              x **= 2 # 36.0
               </code>
             </pre>
           </section>
@@ -455,6 +455,9 @@
                 <li>File Object</li>
               </ol>
             </ul>
+          </section>
+          <section>
+            <h2>For Loop (cont.)</h2>
             <pre style="border: 0; box-shadow: 0px 0px;">
               <code style="border: 0">
               >> x = [1,2,3]
@@ -468,6 +471,7 @@
               </code>
             </pre>
           </section>
+
 
           <section>
             <h2>For Loop (subcommands)</h2>
@@ -528,9 +532,9 @@
             <h2>Syntax</h2>
             <pre style="border: 0; box-shadow: 0px 0px;">
             <code>
-            open(file, mode="r") # Read
-            open(file, mode="w") # Write
-            open(file, mode="a") # Append
+            open("file_path", mode="r") # Read
+            open("file_path", mode="w") # Write
+            open("file_path", mode="a") # Append
             </code>
             </pre>
           </section>
@@ -543,7 +547,7 @@
             <h2>Context Manager</h2>
             <pre style="border: 0; box-shadow: 0px 0px;">
             <code>
-            with open(file, mode) as file:
+            with open("file_path", "mode") as file_handler:
                 ....
             </code>
             </pre>
@@ -690,6 +694,9 @@
                     self.color = num
             </code>
             </pre>
+          </section>
+          <section>
+            <h2>Classes Example (cont.)</h2>
             <pre style="border: 0; box-shadow: 0px 0px;">
             <code>
             ford_escape = Car("Ford") # Class Instantiation
@@ -701,7 +708,6 @@
             </pre>
           </section>
         </section>
-
         
         <section>
           <h2>Topics I didn't cover</h2>
