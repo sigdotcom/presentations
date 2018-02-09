@@ -261,7 +261,7 @@
             <h2>List Slicing</h3>
             <pre style="border: 0; box-shadow: 0px 0px;">
               <code style="border: 0" data-noescape>
-              spliceable[start:stop:step]
+              sliceable[start:stop:step]
               </code>
             </pre>
             <ul>
@@ -379,7 +379,6 @@
                 Returns true if the "subject" is a member of the "predicate",
                 otherwise false
               </li>
-              <li><b style="color:red">DANGER!</b></li>
             </ul>
             <pre style="border: 0; box-shadow: 0px 0px;">
               <code style="border: 0">
@@ -403,6 +402,7 @@
                 Returns True if the "subject" has the same identity as the
                 "predicate", otherwise False
               </li>
+              <li><b style="color:red">DANGER!</b></li>
             </ul>
             <pre style="border: 0; box-shadow: 0px 0px;">
               <code style="border: 0">
@@ -574,8 +574,8 @@
             <h2>Syntax</h2>
             <pre style="border: 0; box-shadow: 0px 0px;">
             <code>
-            def <function_name>(<arguments>):
-                <body>
+            def function_name(arguments):
+                ...
 
             # Example
             def is_even(num):
