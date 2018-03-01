@@ -110,3 +110,6 @@ ENV/
 
 # webstorm
 .idea/
+
+# MacOS
+.DS_Store
