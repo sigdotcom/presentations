@@ -1,12 +1,0 @@
---2018-02-22 20:02:45--  https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fhitesh.in%2Fwp-content%2Fuploads%2F2009%2F12%2F120909_1217_DjangoFlowc1.png
-Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
-Resolving proxy.duckduckgo.com (proxy.duckduckgo.com)... 23.21.193.210
-Connecting to proxy.duckduckgo.com (proxy.duckduckgo.com)|23.21.193.210|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 116342 (114K) [image/png]
-Saving to: ‘index.html?u=http:%2F%2Fhitesh.in%2Fwp-content%2Fuploads%2F2009%2F12%2F120909_1217_DjangoFlowc1.png’
-
-            index.html?   0%[                               ]       0  --.-KB/s               index.html?u=http:%2F%2 100%[==============================>] 113.62K  --.-KB/s    in 0.1s    
-
-2018-02-22 20:02:45 (1.12 MB/s) - ‘index.html?u=http:%2F%2Fhitesh.in%2Fwp-content%2Fuploads%2F2009%2F12%2F120909_1217_DjangoFlowc1.png’ saved [116342/116342]
-
