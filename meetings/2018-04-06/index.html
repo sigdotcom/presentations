@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>SIG.com Git + Docs Workshop</title>
+
+    <meta name="description" content="Introduction to the basics of Django.">
+    <meta name="author" content="Kevin Schoonover">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../../src/css/reveal.css">
+    <link rel="stylesheet" href="../../src/css/theme/white.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../src/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../../src/css/print/pdf.css' : '../../src/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <!-- Header section -->
+        <section>
+          <div style="margin: 0 auto; background-size: contain; background-position: center; background-repeat: no-repeat; width: 450px; height: 400px; background-image: url(./img/SIGdotCOM.png);">
+          </div>
+          <h4>April 06th, 2018</h4>
+        </section>
+
+        <section>
+          <h2>Outline</h2>
+          <ul>
+            <li>Progress Updates</li>
+            <li>Design Discussion</li>
+            <li>Code Review</li>
+            <li>Goals for next week</li>
+            <li>Closing Remarks</li>
+          </ul>
+        </section>
+
+        <!-- Progress Updates Section -->
+        <section>
+          <h2>Progress Updates</h2>
+          <ul>
+            <li>Events</li>
+            <li>Tools</li>
+            <li>API Permissions</li>
+          </ul>
+        </section>
+
+        <!-- Design Discussion Section -->
+        <section>
+          <h2>Design Discussion</h2>
+          <ul>
+            <li>Events - What next?</li>
+            <li>Tools - What tools do we want to do?</li>
+          </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+          <h2>Code Review</h2>
+          <a href="https://github.com/sigdotcom/acm.mst.edu/pull/178" target="_blank">
+            Code review of the week
+          </a>
+        </section>
+
+        <section>
+          <h2>Projects / Deadlines</h2>
+          <ul>
+            <li>Media Page (2018/04/13)</li>
+            <li>Membership Tool (2018/04/20)</li>
+            <li>Redesign (2018/04/13)</li>
+            <li>???</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Closing Remarks</h2>
+          <ul>
+            <li>Code Sprint <strong>this Sunday 1pm-6pm</strong> </li>
+            <li>Weekly Code Sprints?</li>
+          </ul>
+        </section>
+
+
+      </div>
+    </div>
+
+    <script src="../../src/lib/js/head.min.js"></script>
+    <script src="../../src/js/reveal.js"></script>
+
+    <script>
+
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: '../../src/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../src/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../src/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../src/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../../src/plugin/search/search.js', async: true },
+          { src: '../../src/plugin/zoom-js/zoom.js', async: true },
+          { src: '../../src/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
