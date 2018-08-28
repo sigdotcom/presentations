@@ -1,4 +1,6 @@
 # Based on https://github.com/github/gitignore/blob/252058ed8e0ce302e2e5cdcb5d473afe56d643aa/Python.gitignore
+.DS_Store
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
