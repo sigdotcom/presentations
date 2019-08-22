@@ -3,6 +3,9 @@
 All of the slides for SIG.com are written using
 [reveal.js](https://github.com/hakimel/reveal.js/)
 
+The master branch is automatically built using GitHub pages and can be viewed
+at https://sigdotcom.github.io/presentations/path/to/directory/.
+
 ## Cloning the repository
 The presentation repository utilizes the [reveal.js framework](https://revealjs.com/#/)
 and in doing so requires it as a submodule. Due to this, cloning the repository
@@ -22,7 +25,7 @@ submodules recursively.
 The easiest way to open a presentation is to open it directly in the
 webbrowser or use the command line. For example, let us say the the
 `presentations` repo is located at `/home/local/git-local/presentations/`. To
-open a meeting presentation you can open your favorite webbrowser and type 
+open a meeting presentation you can open your favorite webbrowser and type
 `file:///home/local/git-local/presentations/meetings/2018-02-02/index.html`.
 
 Otherwise, you can use the terminal:
