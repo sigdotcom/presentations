@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ACM Web | HTML</title>
+
+		<link rel="stylesheet" href="../../src/css/reveal.css">
+		<link rel="stylesheet" href="../../src/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../src/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../src/css/print/pdf.css' : '../../src/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <div style="margin: 0 auto; background-size: contain;
+               background-position: center; background-repeat: no-repeat;
+               height: 300px; background-image:
+               url(./imgs/sigdotcomlogo.png);"> </div>
+          <br />
+          <h2>Intro to Web Dev/HTML</h2>
+          <h4>Kevin Schoonover</h4>
+        </section>
+
+        <!-- What is Web Development Section -->
+        <section>
+          <section>
+            <h2>What is Web Development</h2>
+            <p>
+              A form of software development focused on building web
+              applications ordinarily run on web browsers
+            </p>
+          </section>
+          <section>
+            <h2>Unorthodox Examples</h2>
+            <a href="https://code.visualstudio.com/">
+              <img style="height: 300px;" src="./imgs/vs_code.png">
+            </a>
+            <a href="https://www.airbnb.com/mobile">
+              <img style="height: 300px;" src="./imgs/airbnb_logo.jpg">
+            </a>
+          </section>
+          <section>
+            <h2>Why is web development interesting?</h2>
+            <ol>
+              <li>Extremely fast moving space</li>
+              <li>High adoption easily</li>
+              <li>Very complex/featureful interactions</li>
+              <li>Majority of people interact through apps/websites</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Challenges</h2>
+            <img style="height: 500px;"
+                 src="./imgs/web_development_many_screens.jpg">
+          </section>
+          <section>
+            <h2>Challenges</h2>
+            <ol>
+              <li>Large learning curve</li>
+              <li>Keeping up-to-date in a very rapid space</li>
+              <li>Wide variety of browsers / screen sizes / dpis</li>
+            </ol>
+          </section>
+        </section>
+
+        <!-- What is a Browser Section -->
+        <section>
+          <section>
+            <h2>What is a Browser</h2>
+            <p>
+              Application that fetches data/code (usually HTML, CSS, and JS)
+              from a web server and render the data/code for the user.
+            </p>
+          </section>
+
+          <section>
+            <h2>Demo 1</h2>
+          </section>
+
+          <section>
+            <h2>Browser Differences</h2>
+            <a href="https://caniuse.com/#search=flex">
+              <img style="height: 500px;" src="./imgs/can_i_use.png">
+            </a>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>HTML 101</h2>
+          </section>
+
+          <section>
+            <p>HTML = Hypertext <b>Markup Language</b></p>
+          </section>
+        </section>
+			</div>
+		</div>
+
+		<script src="../../src/lib/js/head.min.js"></script>
+		<script src="../../src/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        history: true,
+				dependencies: [
+					{ src: '../../src/plugin/markdown/marked.js' },
+					{ src: '../../src/plugin/markdown/markdown.js' },
+					{ src: '../../src/plugin/notes/notes.js', async: true },
+					{ src: '../../src/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
