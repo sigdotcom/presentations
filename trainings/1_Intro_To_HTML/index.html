@@ -101,11 +101,222 @@
         <section>
           <section>
             <h2>HTML 101</h2>
+            <ul>
+              <li>HTML === Hypertext <b>Markup Language</b></li>
+              <li>HTML !== Programming Language</li>
+              <li>Provides page's structure</li>
+              <li>Very similiar to XML</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Elements</h2>
+            <p>HTML Building Blocks</p>
+            <a href="./imgs/html_element.png">
+              <img style="height: 250px;" src="./imgs/html_element.png">
+            </a>
+          </section>
+          <section>
+            <h2>Attributes</h2>
+            <p>Extend elements by attaching extra metadata</p>
+            <a href="./imgs/html_attribute.png">
+              <img style="height: 125px;" src="./imgs/html_attribute.png">
+            </a>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Empty Elements
+              Elements that take no content<br />
+              (usually for rendering items)
+              ```html
+              <!-- Valid (browser will close) -->
+              <img style="height: 300px;" src="./imgs/vs_code.png">
+
+              <!-- You SHOULD but don't have to close -->
+              <img style="height: 300px;" src="./imgs/vs_code.png" />
+
+              <!-- Also valid -->
+              <img style="height: 300px;" src="./imgs/vs_code.png"></img>
+              ```
+            </script>
           </section>
 
-          <section>
-            <p>HTML = Hypertext <b>Markup Language</b></p>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Nesting Elements
+              Elements within elements
+
+              ```html
+              <!-- THIS -->
+              <p>My cat is <strong>very</strong> grumpy.</p>
+
+              <!-- NOT THIS -->
+              <p>My cat is <strong>very grumpy.</p></strong>
+
+              <!-- Like a tree -->
+              <p>
+                This
+                <span>
+                  is
+                </span>
+                proper
+              </p>
+              ```
+            </script>
           </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Anatomy of HTML Document
+              ```html
+              <!-- Preamble defining 'ruleset' -->
+              <!DOCTYPE html>
+              <!-- Root element of HTML document -->
+              <html>
+                <!-- HTML metadata for browsers -->
+                <head>
+                  <meta charset="utf-8">
+                  <title>My test page</title>
+                </head>
+                <!-- HTML content for users -->
+                <body>
+                  <img src="images/firefox-icon.png" alt="My test image">
+                </body>
+              </html>
+              ```
+            </script>
+          </section>
+        </section>
+
+        <!-- Essential HTML Elements Section -->
+        <section>
+          <section>
+            <h2>Essential HTML Elements</h2>
+            <p>
+              <a href="./essential_html_demo/index.html" target="_blank">
+                click me
+              </a>
+            </p>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Headings
+              Main titles, chapter titles, etc.
+              ```html
+              <h1>My main title</h1>
+              <h2>My top level heading</h2>
+              <h3>My subheading</h3>
+              <h4>My sub-subheading</h4>
+              ```
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Paragraphs
+              Paragraphs of Text of text
+              ```html
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                quam nibh, ornare id nisl ut, tristique ornare nunc. Aenean enim
+                felis, sagittis ac neque tristique, molestie tempus nisl.
+              </p>
+              ```
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Unordered Lists (bullets)
+              ```html
+              <ul>
+                <li>Order doesn't matter</li>
+                <li>I can be in any order I want</li>
+              </ul>
+              ```
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Ordered Lists (numbered)
+              ```html
+              <ol>
+                <li>I am number 1</li>
+                <li>I am number 2</li>
+              </ol>
+              ```
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Links
+              ```html
+              <a href="https://google.com">
+                Google in current window
+              </a>
+
+              <a href="https://google.com" target="_blank">
+                Google in new window
+              </a>
+
+              <a href="#test">
+                Link to an 'id' (not important yet)
+              </a>
+              ```
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## Span
+              Group inline-elements in document
+              ```html
+              <p>
+                Hello I am <span style="text-size: 5rem">KEVIN</span>
+              </p>
+              ```
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## The All-Powerful Div
+              A division or section in HTML. <br/>
+              The most used (and abused) HTML element
+              ```html
+              <div>I contain text</div>
+
+              <div>
+                <div>
+                  I contain other divs
+                </div>
+              </div>
+
+              <div>
+                <p>I can contain any element</p>
+              </div>
+              ```
+            </script>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>
+              <a target="_blank" href="https://microsoft.github.io/frontend-bootcamp/step1-01/demo/">
+                Exploration Excercise
+              </a>
+            </h2>
+          </section>
+          <section>
+            <h2>
+              <a target="_blank" href="https://microsoft.github.io/frontend-bootcamp/step1-01/exercise/">
+                Final Excercise
+              </a>
+            </h2>
+          </section>
+        </section>
+
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="https://bit.ly/2lXKxoK">https://bit.ly/2lXKxoK</a></li>
+          </ul>
         </section>
 			</div>
 		</div>
