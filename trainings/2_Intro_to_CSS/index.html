@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ACM Web | HTML</title>
+
+		<link rel="stylesheet" href="../../src/css/reveal.css">
+		<link rel="stylesheet" href="../../src/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../src/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../src/css/print/pdf.css' : '../../src/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <div style="margin: 0 auto; background-size: contain;
+               background-position: center; background-repeat: no-repeat;
+               height: 300px; background-image:
+               url(./imgs/sigdotcomlogo.png);"> </div>
+          <br />
+          <h2>Intro to CSS</h2>
+          <h4>Kevin Schoonover</h4>
+        </section>
+
+        <!-- What is CSS -->
+        <section>
+          <section>
+            <h2>CSS 101</h2>
+            <ul>
+              <li>CSS === Cascading Style Sheets</li>
+              <li>CSS !== Programming Language</li>
+              <li>Provides page's form</li>
+              <li>Augments how elements look</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2><a target="_blank" href="./demo_1/index.html">Demo 1</a></h2>
+            <p>HTML without CSS (Structure)</p>
+          </section>
+
+          <section>
+            <h2><a target="_blank" href="./demo_2/index.html">Demo 2</a></h2>
+            <p>HTML with CSS (Structure + Form)</p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## CSS Syntax
+              rule-based language -- define rules for groups of styles
+              ```css
+              <!-- Rule -->
+              <selectors> {
+                <!-- Declaration -->
+                <property:string>: <value: bool, number, string, etc.>
+              }
+
+              ...
+
+              <!-- Rule -->
+              <selectors> {
+                <!-- Declaration -->
+                <property:string>: <value: bool, number, string, etc.>
+              }
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## CSS gotchas
+              + CSS Specification is developed by W3C
+              + selector/property support is dependant on browser
+              + lots of memorization / googling at the beginning for names
+              + Browsers add default element styles, but you can change with CSS
+            </script>
+          </section>
+
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 3](./demo_3/index.html)
+              "I want the main heading on my page to be shown as large red text."
+              ```css
+              h1 {
+                  color: red;
+                  font-size: 5em;
+              }
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 4](./demo_4/index.html)
+              Multiple different rules in a document
+              ```css
+              h1 {
+                  color: red;
+                  font-size: 5em;
+              }
+
+              p {
+                  color: blue;
+                  font-size: 7em;
+              }
+              ```
+            </script>
+          </section>
+
+
+          <section data-markdown>
+            <script type="text/template">
+              ## In-line CSS modules
+              Writing CSS in HTML Elements
+              ```html
+              <html>
+                <head></head>
+                <body>
+                  <h1 style="color: red; font-size: 1rem">Hello</h1>
+                </body>
+              </html>
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## In-HTML CSS modules
+              Writing CSS in HTML Document
+              ```html
+              <html>
+                <head>
+                  <style>
+                  h1 {
+                    color: red;
+                    font-size: 1rem;
+                  }
+                  </style>
+                </head>
+                <body>
+                  <h1>Hello</h1>
+                </body>
+              </html>
+              ```
+            </script>
+          </section>
+
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Including CSS modules
+              Writing CSS in its own dedicated file (right way)
+              ```css
+              /* main.css */
+              h1 {
+                color: red;
+                font-size: 1rem;
+              }
+              ```
+
+              ```html
+              <!-- index.html -->
+              <html>
+                <head>
+                  <link rel="stylesheet" href="main.css" />
+                </head>
+
+                <body>
+                  <h1>Hello</h1>
+                </body>
+              </html>
+              ```
+            </script>
+          </section>
+
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Practice 1](./practice_1/template.html)
+              Make an h1 tag look like a p tag
+              ```css
+              h1 {
+                  margin-top: <number>px;
+                  margin-bottom: <number>px;
+                  font-weight: <string>;
+                  font-size: <number>rem;
+              }
+              ```
+            </script>
+          </section>
+        </section>
+
+        <!-- Essential HTML Elements Section -->
+        <section>
+          <section>
+            <h2>CSS Classes</h2>
+            <p>The majority of CSS selection</p>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## [Adding a class](./demo_5/index.html)
+              Identifying similiar HTML element on a page
+              ```css
+              /* main.css */
+              .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+              }
+              ```
+
+              ```html
+              <!-- index.html -->
+              <button class="button">Hello</button>
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Multiple Classes
+              ```css
+              /* main.css */
+              .green {
+                background-color: #4CAF50; /* Green */
+              }
+
+              .button {
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+              }
+              ```
+
+              ```html
+              <!-- index.html -->
+              <button class="green button">Hello</button>
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [HTML + Class Selector](./demo_6/index.html)
+              ```css
+              /* main.css */
+              .green {
+                background-color: #4CAF50; /* Green */
+              }
+
+              div.button {
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+              }
+              ```
+
+              ```html
+              <!-- index.html -->
+              <div class="green button">Hello</button>
+              <button class="green button">Hello</button>
+              ```
+            </script>
+          </section>
+        </section>
+
+        <!-- Location Selectors Section -->
+        <section>
+          <section>
+            <h2>Location Selectors</h2>
+            <p>Styling things based on their location in a document</p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Descendant Combinator
+              I want to select a descendant of another element
+
+              "Any emphasised tag in a list item will be purple":
+              ```css
+              /* main.css */
+              li em {
+                color: puriple;
+              }
+              ```
+
+              "Any list item in a unorderd list will be large":
+              ```css
+              /* main.css */
+              ul li {
+                font-size: 5rem;
+              }
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Adjacent sibling combinator
+              I want the following direct neighbor of an element to be styled
+
+              "I want the first paragraph after h1 to be large":
+              ```css
+              /* main.css */
+              h1 + p {
+                font-size: 4rem;
+              }
+              ```
+
+              "I want any list following a p to have a red background":
+              ```css
+              /* main.css */
+              p + ul, p + li {
+                background-color: red
+              }
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Practice 2](./practice_2/final.html)
+              Make a document like the following using the above selectors
+            </script>
+          </section>
+        </section>
+
+        <!-- State Selectors Section -->
+        <section>
+          <section>
+            <h2>State Selectors</h2>
+            <p>Styling things based on the element's state</p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Anchor Tag Demo](./demo_7/index.html)
+              ```css
+              /* main.css */
+              a:link {
+                  color: pink;
+              }
+
+              a:visited {
+                  color: green;
+              }
+
+              a:hover {
+                  text-decoration: none;
+              }
+              ```
+
+              ```html
+              <!-- index.html -->
+              <a href="http://example.com">here</a>
+              ```
+            </script>
+          </section>
+        </section>
+
+        <section>
+          <h2>
+            <a target="_blank"
+               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">
+              CSS Reference / Properties
+            </a>
+          </h2>
+        </section>
+
+        <section>
+          <h2>
+            <a target="_blank" href="https://microsoft.github.io/frontend-bootcamp/step1-02/exercise/">
+              CSS Excercise
+            </a>
+          </h2>
+        </section>
+
+        <section>
+          <section>
+            <h2>Flexbox</h2>
+            <p>The solution to all of your formatting needs</p>
+            <ul>
+              <li>lays out, aligns, and distributes space among items in a container</li>
+              <li>allows container to alter items to fill space</li>
+              <li>Very useful for make responsive and/or centered lists</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>
+              <a target="_blank"
+                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">
+                Flexbox Tutorial
+              </a>
+            </h2>
+          </section>
+        </section>
+
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            <li><a target="_blank" href="https://bit.ly/2lXKxoK">https://bit.ly/2lXKxoK</a></li>
+          </ul>
+        </section>
+			</div>
+		</div>
+
+		<script src="../../src/lib/js/head.min.js"></script>
+		<script src="../../src/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        history: true,
+				dependencies: [
+					{ src: '../../src/plugin/markdown/marked.js' },
+					{ src: '../../src/plugin/markdown/markdown.js' },
+					{ src: '../../src/plugin/notes/notes.js', async: true },
+					{ src: '../../src/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
