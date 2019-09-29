@@ -122,8 +122,9 @@
         <section>
           <section>
             <h2>
-              <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">Typescript
-                in 5 minutes
+              <a
+                href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+                >Typescript in 5 minutes
               </a>
             </h2>
           </section>
@@ -143,19 +144,88 @@
           <section>
             <h2>Practice 1 - Type Annotations</h2>
             <ul>
-              <li><a href="./practice1/greeter.ts">Download - greeter.ts</a></li>
-              <li><a href="./practice1/index.html">Download - index.html</a></li>
-              <li><a href="./practice1/greeter_final.ts">Final - greeter.ts</a></li>
-              <li><a href="./practice1/index_final.html">Final - index.html</a></li>
+              <li>
+                <a href="./practice1/greeter.ts">Download - greeter.ts</a>
+              </li>
+              <li>
+                <a href="./practice1/index.html">Download - index.html</a>
+              </li>
+              <li>
+                <a href="./practice1/greeter_final.ts">Final - greeter.ts</a>
+              </li>
+              <li>
+                <a href="./practice1/index_final.html">Final - index.html</a>
+              </li>
             </ul>
+          </section>
+          <section>
+            <h2>Interfaces</h2>
+            <ul>
+              <li>A lot like classes, but only exist at compile time</li>
+              <li>Used to assert structural equivalence on compile</li>
+            </ul>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 2 - Interfaces](./demo2/index.html)
+              ```typescript
+              interface Person {
+                  firstName: string;
+                  lastName: string;
+              }
+
+              function greeter(person: Person) {
+                  return `Hello ${person.firstName} ${person.lastName}`;
+              }
+
+              let user = { firstName: "Jane", lastName: "User" };
+
+              document.body.textContent = greeter(user);
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 3 - Classes](./demo3/index.html)
+              ```typescript
+              class Student {
+                  fullName: string;
+                  constructor(
+                    public firstName: string,
+                    public middleInitial: string,
+                    public lastName: string
+                  ) {
+                      this.fullName = `${firstName} ${middleInitial} ${lastName}`;
+                  }
+              }
+
+              interface Person {
+                  firstName: string;
+                  lastName: string;
+              }
+
+              function greeter(person: Person) {
+                  return `Hello, ${person.firstName} ${person.lastName}`;
+              }
+
+              let user = new Student("Jane", "M.", "User");
+
+              document.body.textContent = greeter(user);
+              ```
+            </script>
+          </section>
         </section>
 
+        <!-- React 101 -->
         <section>
-          <h2>Interfaces</h2>
-          <ul>
-            <li>A lot like classes, but only exist at compile time</li>
-            <li>Used to assert structural equivalence on compile</li>
-          </ul>
+          <section>
+            <h2>React 101</h2>
+            <ul>
+              <li>Test</li>
+            </ul>
+          </section>
         </section>
       </div>
     </div>
