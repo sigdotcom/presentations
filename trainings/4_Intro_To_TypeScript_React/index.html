@@ -66,6 +66,96 @@
               <li>Install TypeScript globally or locally</li>
             </ul>
           </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Basic Types (pt. 1)](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+              ```typescript
+              // Boolean (true or false)
+              let isDone: boolean = false;
+
+              // Number (all numbers are floating point)
+              let decimal: number = 6;
+              let hex: number = 0xf00d;
+
+              // String
+              let color: string = "blue";
+              color = 'red';
+              let sentence: string = `Hello, my color is ${ color }.
+
+              My number is ${ decimal + 1 }.`;
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Basic Types (pt. 2)](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+              ```typescript
+              // Array
+              let list: number[] = [1, 2, 3];
+
+              // Tuple
+              let x: [string, number];
+              x = ["hello", 10]; // OK
+              x = [10, "hello"]; // Error
+
+              // Any
+              let notSure: any = 4;
+              notSure = "maybe a string instead";
+              notSure = false; // okay, definitely a boolean
+              ```
+            </script>
+          </section>
+
+          <section>
+            <h2>Additional Features</h2>
+            <ul>
+              <li>Function Types + More Advanced Types</li>
+              <li>Interfaces</li>
+              <li>ES-agnostic classes</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- TypeScript in 5 minutes -->
+        <section>
+          <section>
+            <h2>
+              <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">Typescript
+                in 5 minutes
+              </a>
+            </h2>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 1 - Basic TS](./demo1/index.html)
+              ```typescript
+              function greeter(person) {
+                return "Hello, " + person;
+              }
+
+              let user = "Jane User";
+              document.body.textContent = greeter(user);
+              ```
+            </script>
+          </section>
+          <section>
+            <h2>Practice 1 - Type Annotations</h2>
+            <ul>
+              <li><a href="./practice1/greeter.ts">Download - greeter.ts</a></li>
+              <li><a href="./practice1/index.html">Download - index.html</a></li>
+              <li><a href="./practice1/greeter_final.ts">Final - greeter.ts</a></li>
+              <li><a href="./practice1/index_final.html">Final - index.html</a></li>
+            </ul>
+        </section>
+
+        <section>
+          <h2>Interfaces</h2>
+          <ul>
+            <li>A lot like classes, but only exist at compile time</li>
+            <li>Used to assert structural equivalence on compile</li>
+          </ul>
         </section>
       </div>
     </div>
