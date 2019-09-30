@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>ACM Web | TypeScript + React</title>
+
+    <link rel="stylesheet" href="../../src/css/reveal.css" />
+    <link rel="stylesheet" href="../../src/css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../src/lib/css/zenburn.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "../../src/css/print/pdf.css"
+        : "../../src/css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div
+            style="margin: 0 auto; background-size: contain;
+               background-position: center; background-repeat: no-repeat;
+               height: 300px; background-image:
+               url(./imgs/sigdotcomlogo.png);"
+          ></div>
+          <br />
+          <h2>Intro to TypeScript + React</h2>
+          <h4>Kevin Schoonover</h4>
+        </section>
+
+        <!-- What is CSS -->
+        <section>
+          <section>
+            <h2>TypeScript 101</h2>
+            <ul>
+              <li>
+                'typed superset of JavaScript that complies to plain JavaScript'
+              </li>
+              <li>Provides the page's function</li>
+              <li>Makes backwards compatiability between browsers easy</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Basic Setup</h2>
+            <ul>
+              <li><a href="https://nodejs.org/en/">Install NodeLTS</a></li>
+              <li>
+                <a href="https://yarnpkg.com/lang/en/">
+                  Install Yarn
+                </a>
+              </li>
+              <li>Install TypeScript globally or locally</li>
+            </ul>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Basic Types (pt. 1)](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+              ```typescript
+              // Boolean (true or false)
+              let isDone: boolean = false;
+
+              // Number (all numbers are floating point)
+              let decimal: number = 6;
+              let hex: number = 0xf00d;
+
+              // String
+              let color: string = "blue";
+              color = 'red';
+              let sentence: string = `Hello, my color is ${ color }.
+
+              My number is ${ decimal + 1 }.`;
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Basic Types (pt. 2)](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+              ```typescript
+              // Array
+              let list: number[] = [1, 2, 3];
+
+              // Tuple
+              let x: [string, number];
+              x = ["hello", 10]; // OK
+              x = [10, "hello"]; // Error
+
+              // Any
+              let notSure: any = 4;
+              notSure = "maybe a string instead";
+              notSure = false; // okay, definitely a boolean
+              ```
+            </script>
+          </section>
+
+          <section>
+            <h2>Additional Features</h2>
+            <ul>
+              <li>Function Types + More Advanced Types</li>
+              <li>Interfaces</li>
+              <li>ES-agnostic classes</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- TypeScript in 5 minutes -->
+        <section>
+          <section>
+            <h2>
+              <a
+                href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+                >Typescript in 5 minutes
+              </a>
+            </h2>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 1 - Basic TS](./demo1/index.html)
+              ```typescript
+              function greeter(person) {
+                return "Hello, " + person;
+              }
+
+              let user = "Jane User";
+              document.body.textContent = greeter(user);
+              ```
+            </script>
+          </section>
+          <section>
+            <h2>Practice 1 - Type Annotations</h2>
+            <ul>
+              <li>
+                <a href="./practice1/greeter.ts">Download - greeter.ts</a>
+              </li>
+              <li>
+                <a href="./practice1/index.html">Download - index.html</a>
+              </li>
+              <li>
+                <a href="./practice1/greeter_final.ts">Final - greeter.ts</a>
+              </li>
+              <li>
+                <a href="./practice1/index_final.html">Final - index.html</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Interfaces</h2>
+            <ul>
+              <li>A lot like classes, but only exist at compile time</li>
+              <li>Used to assert structural equivalence on compile</li>
+            </ul>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 2 - Interfaces](./demo2/index.html)
+              ```typescript
+              interface Person {
+                  firstName: string;
+                  lastName: string;
+              }
+
+              function greeter(person: Person) {
+                  return `Hello ${person.firstName} ${person.lastName}`;
+              }
+
+              let user = { firstName: "Jane", lastName: "User" };
+
+              document.body.textContent = greeter(user);
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## [Demo 3 - Classes](./demo3/index.html)
+              ```typescript
+              class Student {
+                  fullName: string;
+                  constructor(
+                    public firstName: string,
+                    public middleInitial: string,
+                    public lastName: string
+                  ) {
+                      this.fullName = `${firstName} ${middleInitial} ${lastName}`;
+                  }
+              }
+
+              interface Person {
+                  firstName: string;
+                  lastName: string;
+              }
+
+              function greeter(person: Person) {
+                  return `Hello, ${person.firstName} ${person.lastName}`;
+              }
+
+              let user = new Student("Jane", "M.", "User");
+
+              document.body.textContent = greeter(user);
+              ```
+            </script>
+          </section>
+        </section>
+
+        <!-- React 101 -->
+        <section>
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/redirect-to-codepen/hello-world"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                React 101
+              </a>
+            </h2>
+            <ul>
+              <li>
+                declarative, efficient, and flexible library for building user
+                interfaces
+              </li>
+              <li>
+                Simply a 'renderer' (paints the page the way you want it)
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/introducing-jsx.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >JSX</a
+              >
+            </h2>
+            <p>
+              React's very powerful 'templating language' that provides
+              syntactic sugar for Reacts underlying functionality.
+            </p>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/rendering-elements.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Elements
+              </a>
+            </h2>
+            <p>
+              Elements are the basic building blocks of react (think of HTML
+              elements).
+            </p>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/components-and-props.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Components
+              </a>
+            </h2>
+            <p>
+              Reusable groups of Elements that accept arbitrary input and can
+              run internal logic.
+            </p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Your First React App
+              ```bash
+              yarn global add create-react-app
+              yarn create react-app test_app --typescript
+              cd test_app
+              yarn start
+              ```
+            </script>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/components-and-props.html#function-and-class-components"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Class vs Functional Components
+              </a>
+            </h2>
+            <p>
+              Two different ways of expressing components due to how React was
+              developed. Prefer functional components.
+            </p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Practice 2 - Components
+              Navigate to `practice2/`
+            </script>
+          </section>
+
+          <section>
+            <h2>Component Lifecycle</h2>
+            <a href="./imgs/react_component_lifestyle.jpeg">
+              <img
+                style="height: 500px;"
+                src="./imgs/react_component_lifestyle.jpeg"
+              />
+            </a>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/handling-events.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Events
+              </a>
+            </h2>
+            <p>Handling DOM events using React such as 'onClick'</p>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/conditional-rendering.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Conditional Rendering
+              </a>
+            </h2>
+            <p>
+              Since components are equivalent to functions, you can decide what
+              you want to render on the fly (based on state, props, etc.)
+            </p>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/lists-and-keys.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Rendering Lists
+              </a>
+            </h2>
+            <p>
+              Using special syntax, React can efficiently update lists of items
+              (only rendering the items that change).
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                State Basics
+              </a>
+            </h2>
+            <p>
+              React's Secret Sauce
+            </p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Practice 3 - State
+              Navigate to `practice3/`
+            </script>
+          </section>
+
+          <section>
+            <h2>
+              <a
+                href="https://reactjs.org/tutorial/tutorial.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Final Practice
+              </a>
+            </h2>
+          </section>
+        </section>
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            <li>
+              <a target="_blank" href="https://bit.ly/2lXKxoK"
+                >https://bit.ly/2lXKxoK</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../src/lib/js/head.min.js"></script>
+    <script src="../../src/js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        history: true,
+        dependencies: [
+          { src: "../../src/plugin/markdown/marked.js" },
+          { src: "../../src/plugin/markdown/markdown.js" },
+          { src: "../../src/plugin/notes/notes.js", async: true },
+          {
+            src: "../../src/plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
