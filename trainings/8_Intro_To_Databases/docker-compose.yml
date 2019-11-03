@@ -1,0 +1,29 @@
+# docker-compose.yml
+---
+version: "3"
+services:
+  web:
+    restart: unless-stopped
+    build: "./backend"
+    environment:
+      - DB_HOST=db
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./backend:/server
+    networks:
+      - db_nw
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DATABASE=todos
+      - POSTGRES_USER=postgres
+    networks:
+      - db_nw
+
+networks:
+  db_nw:
+    driver: bridge
+
